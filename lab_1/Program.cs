@@ -8,16 +8,16 @@
 
             // (ЗАДАНИЕ 1)
 
-            //// ЗАДАЧА 2
-            //int input1 = l.ProverkaNum("Введите число (минимум двузначное): ");
+            // ЗАДАЧА 2
+            int input1 = l.ProverkaNum("Введите число (минимум двузначное): ");
 
-            //while (Math.Abs(input1) < 10)
-            //{
-            //    Console.Write("У числа менее 2х знаков. Введите число: ");
-            //    input1 = l.ProverkaNum("");
-            //}
+            while (Math.Abs(input1) < 10)
+            {
+                Console.Write("У числа менее 2х знаков. Введите число: ");
+                input1 = l.ProverkaNum("");
+            }
 
-            //Console.Write("Сумма последних 2х знаков = " + l.sumLastNums(input1));
+            Console.Write("Сумма последних 2х знаков = " + l.sumLastNums(input1));
 
 
             ////ЗАДАЧА 4
