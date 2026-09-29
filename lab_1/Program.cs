@@ -8,16 +8,16 @@
 
             // (ЗАДАНИЕ 1)
 
-            // ЗАДАЧА 2
-            int input1 = l.ProverkaNum("Введите число (минимум двузначное): ");
+            //// ЗАДАЧА 2
+            //int input1 = l.ProverkaNum("Введите число (минимум двузначное): ");
 
-            while (Math.Abs(input1) < 10)
-            {
-                Console.Write("У числа менее 2х знаков. Введите число: ");
-                input1 = l.ProverkaNum("");
-            }
+            //while (Math.Abs(input1) < 10)
+            //{
+            //    Console.Write("У числа менее 2х знаков. Введите число: ");
+            //    input1 = l.ProverkaNum("");
+            //}
 
-            Console.Write("Сумма последних 2х знаков = " + l.sumLastNums(input1));
+            //Console.Write("Сумма последних 2х знаков = " + l.sumLastNums(input1));
 
 
             ////ЗАДАЧА 4
@@ -59,11 +59,42 @@
             //}
 
 
-            // (ЗАДАНИЕ 2)
-            // ЗАДАЧА 2
+            //// (ЗАДАНИЕ 2) if - switch
+            //// ЗАДАЧА 2
+            //int input8 = l.ProverkaNum("Введите число: x = ");
+            //int input9 = l.ProverkaNum("Введите число: y = ");
+            //Console.WriteLine($"x / y =  {l.safeDiv(input8, input9)}");
 
 
+            //// ЗАДАЧА 4
+            //int input10 = l.ProverkaNum("Введите число: x = ");
+            //int input11 = l.ProverkaNum("Введите число: y = ");
+            //Console.WriteLine(l.makeDecision(input10, input11));
 
+
+            //// ЗАДАЧА 6
+            //int input12 = l.ProverkaNum("Введите число: x = ");
+            //int input13 = l.ProverkaNum("Введите число: y = ");
+            //int input14 = l.ProverkaNum("Введите число: z = ");
+            //Console.WriteLine(l.sum3(input12, input13, input14));
+
+
+            //// ЗАДАЧА 8
+            //int input15 = l.ProverkaNum("Введите возраст: ");
+
+            //while (input15 < 0)
+            //{
+            //    Console.Write("Возраст не может быть отрицательным. Введите возраст: ");
+            //    input15 = l.ProverkaNum("");
+            //}
+            //Console.WriteLine(l.age(input15));
+
+
+            // ЗАДАЧА 10
+            Console.Write("Введите день недели (полностью): ");
+            string input16 = Console.ReadLine();
+
+            l.printDays(input16);
 
 
         }
