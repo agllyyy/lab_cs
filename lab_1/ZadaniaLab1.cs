@@ -56,7 +56,8 @@
 
         public bool isDivisor(int a, int b)
         {
-            return (a != 0 && b != 0 && (a % b == 0 || b % a == 0));
+            return (a != 0 && b != 0 
+            && (a % b == 0 || b % a == 0));
         }
 
         public int lastNumSum(int a, int b)
@@ -108,7 +109,6 @@
                 return $"{x} года";
             }
             return $"{x} лет";
-
         }
 
         public void printDays(String x)
@@ -144,7 +144,7 @@
                     break;
 
                 default:
-                    Console.WriteLine("Вы ввели не день недели.");
+                    Console.WriteLine("Вы ввели не день недели");
                     break;
             }
         }
@@ -206,11 +206,13 @@
 
             while (zagad_num != x)
             {
-                x = ProverkaNum("Вы не угадали, введите число от 0 до 9: ");
+                x = ProverkaNum("Вы не угадали, " +
+                    "введите число (0-9): ");
                 count++;
             }
             Console.WriteLine("Вы угадали!");
-            Console.WriteLine($"Вы отгадали число за {count + 1} попытки");
+            Console.WriteLine($"Вы отгадали число за " +
+                $"{count + 1} попытки");
         }
 
 
