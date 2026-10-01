@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace lab_1
-{
+﻿
     internal class ZadaniaLab1
     {
         public int ProverkaNum(string vvod)
@@ -310,4 +305,3 @@ namespace lab_1
         }
 
     }
-}
