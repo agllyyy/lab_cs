@@ -17,8 +17,8 @@
 
 ### Тестирование
 
-![alt text](image-2.png)
-![alt text](image.png)
+![alt text](images/image-2.png)
+![alt text](images/image.png)
 
 ## Задача 4
 
@@ -34,8 +34,8 @@
 
 ### Тестирование
 
-![alt text](image-11.png)
-![alt text](image-3.png)
+![alt text](images/image-11.png)
+![alt text](images/image-3.png)
 
 ## Задача 6
 
@@ -51,8 +51,8 @@
 
 ### Тестирование
 
-![alt text](image-6.png)
-![alt text](image-7.png)
+![alt text](images/image-6.png)
+![alt text](images/image-7.png)
 
 ## Задача 8
 
@@ -68,8 +68,8 @@
 
 ### Тестирование
 
-![alt text](image-1.png)
-![alt text](image-5.png)
+![alt text](images/image-1.png)
+![alt text](images/image-5.png)
 
 ## Задача 10
 
@@ -88,8 +88,8 @@
 
 ### Тестирование
 
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](images/image-9.png)
+![alt text](images/image-10.png)
 
 
 # Задание 2
@@ -110,8 +110,8 @@
 
 ### Тестирование
 
-![alt text](image-4.png)
-![alt text](image-8.png)
+![alt text](images/image-4.png)
+![alt text](images/image-8.png)
 
 ## Задача 4
 
@@ -128,9 +128,9 @@
 
 ### Тестирование
 
-![alt text](image-12.png)
-![alt text](image-13.png)
-![alt text](image-14.png)
+![alt text](images/image-12.png)
+![alt text](images/image-13.png)
+![alt text](images/image-14.png)
 
 ## Задача 6
 
@@ -147,9 +147,9 @@
 
 ### Тестирование
 
-![alt text](image-15.png)
-![alt text](image-16.png)
-![alt text](image-17.png)
+![alt text](images/image-15.png)
+![alt text](images/image-16.png)
+![alt text](images/image-17.png)
 
 ## Задача 8
 
@@ -173,11 +173,11 @@
 
 ### Тестирование
 
-![alt text](image-18.png)
-![alt text](image-19.png)
-![alt text](image-20.png)
-![alt text](image-21.png)
-![alt text](image-22.png)
+![alt text](images/image-18.png)
+![alt text](images/image-19.png)
+![alt text](images/image-20.png)
+![alt text](images/image-21.png)
+![alt text](images/image-22.png)
 
 ## Задача 10
 
@@ -197,9 +197,9 @@
 
 ### Тестирование
 
-![alt text](image-23.png)
-![alt text](image-24.png)
-![alt text](image-25.png)
+![alt text](images/image-23.png)
+![alt text](images/image-24.png)
+![alt text](images/image-25.png)
 
 
 
@@ -219,8 +219,8 @@
 
 ### Тестирование
 
-![alt text](image-26.png)
-![alt text](image-27.png)
+![alt text](images/image-26.png)
+![alt text](images/image-27.png)
 
 ## Задача 4
 
@@ -236,8 +236,8 @@
 
 ### Тестирование
 
-![alt text](image-28.png)
-![alt text](image-29.png)
+![alt text](images/image-28.png)
+![alt text](images/image-29.png)
 
 ## Задача 6
 
@@ -253,8 +253,8 @@
 
 ### Тестирование
 
-![alt text](image-30.png)
-![alt text](image-31.png)
+![alt text](images/image-30.png)
+![alt text](images/image-31.png)
 
 ## Задача 8
 
@@ -271,8 +271,8 @@
 
 ### Тестирование
 
-![alt text](image-32.png)
-![alt text](image-33.png)
+![alt text](images/image-32.png)
+![alt text](images/image-33.png)
 
 ## Задача 10
 
@@ -292,8 +292,8 @@
 
 ### Тестирование
 
-![alt text](image-34.png)
-![alt text](image-35.png)
+![alt text](images/image-34.png)
+![alt text](images/image-35.png)
 
 
 
@@ -314,8 +314,8 @@
 
 ### Тестирование
 
-![alt text](image-36.png)
-![alt text](image-37.png)
+![alt text](images/image-36.png)
+![alt text](images/image-37.png)
 
 ## Задача 4
 
@@ -332,9 +332,9 @@ pos будет вставлено значение x.
 
 ### Тестирование
 
-![alt text](image-38.png)
-![alt text](image-39.png)
-![alt text](image-40.png)
+![alt text](images/image-38.png)
+![alt text](images/image-39.png)
+![alt text](images/image-40.png)
 
 
 ## Задача 6
@@ -351,8 +351,8 @@ pos будет вставлено значение x.
 
 ### Тестирование
 
-![alt text](image-41.png)
-![alt text](image-42.png)
+![alt text](images/image-41.png)
+![alt text](images/image-42.png)
 
 ## Задача 8
 
@@ -369,8 +369,8 @@ pos будет вставлено значение x.
 
 ### Тестирование
 
-![alt text](image-43.png)
-![alt text](image-44.png)
+![alt text](images/image-43.png)
+![alt text](images/image-44.png)
 
 ## Задача 10
 
@@ -386,5 +386,5 @@ pos будет вставлено значение x.
 
 ### Тестирование
 
-![alt text](image-45.png)
-![alt text](image-46.png)
+![alt text](images/image-45.png)
+![alt text](images/image-46.png)

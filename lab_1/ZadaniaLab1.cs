@@ -1,22 +1,28 @@
 ﻿
     internal class ZadaniaLab1
     {
-        public int ProverkaNum(string vvod)
+        public int ProverkaNum(string promt)
         {
-            Console.Write(vvod);
-            string input = Console.ReadLine();
+            Console.Write(promt);
+            string? input = Console.ReadLine();
 
-            int num;
-
-            while (!int.TryParse(input, out num))
+            int x = 0;
+            while (true)
             {
-                Console.Write("Введите число: ");
-                input = Console.ReadLine();
+                if (int.TryParse(input, out x))
+                {
+                    return x;
+                }
+                else
+                {
+                    Console.Write
+                        ("Вы ввели не число! Повторите ввод:");
+                    input = Console.ReadLine();
+                }
             }
-            return num;
         }
 
-        public void RandomMas(int[] arr, int min, int max)
+    public void RandomMas(int[] arr, int min, int max)
         {
             Random rnd = new Random();
 
@@ -171,11 +177,11 @@
 
         public bool equalNum(int x)
         {
-            int posl_el = x % 10;
+            int poslEl = x % 10;
 
             while (x > 0)
             {
-                if (x % 10 != posl_el)
+                if (x % 10 != poslEl)
                 {
                     return false;
                 }
@@ -255,11 +261,11 @@
         {
             for (int i = 0; i < arr.Length / 2; i++)
             {
-                int protiv_el = arr.Length - 1 - i;
+                int protivEl = arr.Length - 1 - i;
 
                 int temp = arr[i];
-                arr[i] = arr[protiv_el];
-                arr[protiv_el] = temp;
+                arr[i] = arr[protivEl];
+                arr[protivEl] = temp;
             }
         }
 
@@ -282,7 +288,6 @@
         public int[] deleteNegative(int[] arr)
         {
             int count = 0;
-
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] >= 0)
@@ -293,7 +298,6 @@
 
             int[] newArr = new int[count];
             int index = 0;
-
             for (int i = 0; i < arr.Length; i++)
             {
                 if (arr[i] >= 0)
@@ -303,7 +307,5 @@
                 }
             }
             return newArr;
-
         }
-
     }
