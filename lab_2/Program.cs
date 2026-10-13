@@ -29,9 +29,77 @@
         Console.WriteLine(h3);
         Console.WriteLine();
 
-        // задача 3.3
+
+        //// задача 3.3
+        //Cities A = new Cities("A", 3);
+        //Cities B = new Cities("B", 2);
+        //Cities C = new Cities("C", 2);
+        //Cities D = new Cities("D", 3);
+        //Cities E = new Cities("E", 1);
+        //Cities F = new Cities("F", 2);
+
+        //A.AddWay(new Way(B, 5));
+        //A.AddWay(new Way(F, 1));
+        //A.AddWay(new Way(D, 6));
+
+        //B.AddWay(new Way(A, 5));
+        //B.AddWay(new Way(C, 3));
+
+        //C.AddWay(new Way(B, 3));
+        //C.AddWay(new Way(D, 4));
+
+        //D.AddWay(new Way(C, 4));
+        //D.AddWay(new Way(E, 2));
+        //D.AddWay(new Way(A, 6));
+
+        //E.AddWay(new Way(F, 2));
+
+        //F.AddWay(new Way(B, 1));
+        //F.AddWay(new Way(E, 2));
+
 
         // задача 4.8
+        Cities B = new Cities("B");
+        Cities C = new Cities("C");
+        Cities D = new Cities("D");
+        Cities E = new Cities("E");
+        Cities F = new Cities("F");
+
+
+        Cities A = new Cities("A", new Way[]
+        {
+            new Way(B, 5),
+            new Way(F, 1),
+            new Way(D, 6)
+        });
+
+        B.AddWay(new Way(A, 5));
+        B.AddWay(new Way(C, 3));
+
+        C.AddWay(new Way(B, 3));
+        C.AddWay(new Way(D, 4));
+
+        D.AddWay(new Way(C, 4));
+        D.AddWay(new Way(E, 2));
+        D.AddWay(new Way(A, 6));
+
+        E.AddWay(new Way(F, 2));
+
+        F.AddWay(new Way(B, 1));
+        F.AddWay(new Way(E, 2));
+
+        Cities[] graf = new Cities[6];
+        graf[0] = A;
+        graf[1] = B;
+        graf[2] = C;
+        graf[3] = D;
+        graf[4] = E;
+        graf[5] = F;
+        for (int i = 0; i < graf.Length; i++)
+        {
+            Console.WriteLine(graf[i]);
+        }
+
 
         // задача 5.5
 
