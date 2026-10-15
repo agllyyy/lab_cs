@@ -14,7 +14,7 @@
         get { return _name; }
         private set
         {
-            if (value != null)
+            if (value != null && value != " " && value != "")
             {
                 _name = value;
             }
@@ -30,14 +30,14 @@
         get { return _height; }
         private set
         {
-            if (value > 0)
+            if (value >= 120 && value <= 220)
             {
                 _height = value;
             }
             else
             {
                 Console.WriteLine("Ошибка значения роста!" +
-                    " Рост не моежт быть отрицательным");
+                    " Рост должен быть в диапазоне (120-220)");
                 _height = 170;
             }
         }

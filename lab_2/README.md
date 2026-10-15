@@ -25,6 +25,7 @@
 
 ![alt text](images/image-5.png)
 
+
 ## Задача 3
 
 ### Текст задачи

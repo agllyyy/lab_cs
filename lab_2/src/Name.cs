@@ -13,20 +13,29 @@ internal class Name
         Patronymic = patronymic;
     }
 
-    public string FirstName
-    {
-        get { return _firstName; }
-        private set
-        {
-            _firstName = value;
-        }
-    }
+    
     public string LastName
     {
         get { return _lastName; }
         private set
         {
             _lastName = value;
+        }
+    }
+    public string FirstName
+    {
+        get { return _firstName; }
+        private set
+        {
+            if (value != null && value != "")
+            {
+                _firstName = value;
+            }
+            else
+            {
+                Console.WriteLine("Ошибка класса! Имя не может быть пустым.");
+                _firstName = "Иван";
+            }
         }
     }
     public string Patronymic
