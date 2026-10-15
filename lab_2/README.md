@@ -24,6 +24,7 @@
 ### Тестирование
 
 ![alt text](images/image-5.png)
+![alt text](images/image1.png)
 
 
 ## Задача 3
@@ -50,8 +51,7 @@
 ### Тестирование
 
 ![alt text](images/image-1.png)
-
-
+![alt text](images/image2.png)
 
 # Задание 2
 
