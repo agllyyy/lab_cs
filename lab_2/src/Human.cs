@@ -14,7 +14,7 @@
         get { return _name; }
         private set
         {
-            if (value != null && value != " " && value != "")
+            if (value != null && value != " ")
             {
                 _name = value;
             }

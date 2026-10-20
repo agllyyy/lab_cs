@@ -3,24 +3,24 @@
     {
         static void Main(string[] args)
         {
-            ZadaniaLab1 lab = new ZadaniaLab1();
+            Method lab = new Method();
 
         // (ЗАДАНИЕ 1)
         // ЗАДАЧА 2
-        int input1 = lab.ProverkaNum
+        int input1 = lab.CheckNum
         ("Введите число (минимум двузначное): ");
 
         while (Math.Abs(input1) < 10)
         {
             Console.Write
             ("У числа менее 2х знаков. Введите число: ");
-            input1 = lab.ProverkaNum("");
+            input1 = lab.CheckNum("");
         }
         Console.WriteLine($"Сумма последних 2х знаков = " +
             $"{lab.sumLastNums(input1)}");
 
         //ЗАДАЧА 4
-        int input2 = lab.ProverkaNum("\nВведите число: ");
+        int input2 = lab.CheckNum("\nВведите число: ");
         Console.WriteLine
         ($"Число положительное - {lab.isPositive(input2)}");
 
@@ -38,56 +38,57 @@
             $"{lab.isUpperCase(input3)}");
 
         // ЗАДАЧА 8
-        int input4 = lab.ProverkaNum("\nВведите число: a = ");
-        int input5 = lab.ProverkaNum("Введите число: b = ");
+        int input4 = lab.CheckNum("\nВведите число: a = ");
+        int input5 = lab.CheckNum("Введите число: b = ");
         Console.WriteLine($"Числа делятся нацело: " +
             $"{lab.isDivisor(input4, input5)}");
 
         // ЗАДАЧА 10
         int count = 0;
-        int sum = lab.ProverkaNum("\nВведите 1е число: ");
+        int sum = lab.CheckNum("\nВведите 1е число: ");
 
         while (count < 4)
         {
-            int input7 = lab.ProverkaNum("Введите число: ");
+            int input7 = lab.CheckNum("Введите число: ");
             int temp = sum;
 
             sum = lab.lastNumSum(sum, input7);
 
             Console.WriteLine($"Сумма чисел " +
-                $"из разряда едениц: {temp % 10} + {input7 % 10} =  {sum}\n");
+                $"из разряда едениц: " +
+                $"{temp % 10} + {input7 % 10} =  {sum}\n");
             count++;
         }
 
 
         // (ЗАДАНИЕ 2) if - switch
         // ЗАДАЧА 2
-        int input8 = lab.ProverkaNum("Введите число:\nx = ");
-        int input9 = lab.ProverkaNum("Введите число:\ny = ");
+        int input8 = lab.CheckNum("Введите число:\nx = ");
+        int input9 = lab.CheckNum("Введите число:\ny = ");
         Console.WriteLine($"{input8}/ {input9} =  " +
             $"{lab.safeDiv(input8, input9)}");
 
         // ЗАДАЧА 4
-        int input10 = lab.ProverkaNum("\nВведите число: x = ");
-        int input11 = lab.ProverkaNum("Введите число: y = ");
+        int input10 = lab.CheckNum("\nВведите число: x = ");
+        int input11 = lab.CheckNum("Введите число: y = ");
         Console.WriteLine(lab.makeDecision(input10, input11));
 
         // ЗАДАЧА 6
-        int input12 = lab.ProverkaNum("\nВведите число: x = ");
-        int input13 = lab.ProverkaNum("Введите число: y = ");
-        int input14 = lab.ProverkaNum("Введите число: z = ");
+        int input12 = lab.CheckNum("\nВведите число: x = ");
+        int input13 = lab.CheckNum("Введите число: y = ");
+        int input14 = lab.CheckNum("Введите число: z = ");
         Console.WriteLine($"Можно ли получить " +
             $"из сложения 2х чисел третье: " +
             $"{lab.sum3(input12, input13, input14)}");
 
         // ЗАДАЧА 8
-        int input15 = lab.ProverkaNum("\nВведите возраст: ");
+        int input15 = lab.CheckNum("\nВведите возраст: ");
 
         while (input15 < 0)
         {
             Console.Write("Возраст не может быть" +
                 " отрицательным. Введите возраст: ");
-            input15 = lab.ProverkaNum("");
+            input15 = lab.CheckNum("");
         }
         Console.WriteLine(lab.age(input15));
 
@@ -101,32 +102,32 @@
 
         //(ЗАДАНИЕ 3) - циклы
         // ЗАДАЧА 2
-        int input17 = lab.ProverkaNum("Введите число " +
+        int input17 = lab.CheckNum("Введите число " +
             "(для вывода от числа до 0):  ");
         Console.WriteLine($"Вывод в обратном порядке:\n" +
             $"{lab.reverseListNums(input17)}");
 
         // ЗАДАЧА 4
         int input19 = 0;
-            int input18 = lab.ProverkaNum("\nВведите число, " +
-                "кот. нужно возвести: ");
+        int input18 = lab.CheckNum("\nВведите число, " +
+            "кот. нужно возвести: ");
 
-            do
-            {
-                input19 = lab.ProverkaNum("Введите " +
-                    "НЕотрицательную степень: ");
-            } while (input19 < 0);
+        do
+        {
+            input19 = lab.CheckNum("Введите " +
+                "НЕотрицательную степень: ");
+        } while (input19 < 0);
 
-            Console.WriteLine($"{input18}^{input19} " +
-                $"= {lab.pow(input18, input19)}");
+        Console.WriteLine($"{input18}^{input19} " +
+            $"= {lab.pow(input18, input19)}");
 
         // ЗАДАЧА 6
-        int input20 = lab.ProverkaNum("\nВведите число: ");
+        int input20 = lab.CheckNum("\nВведите число: ");
         Console.WriteLine($"Все цифры в числе одинаковы: " +
             $"{lab.equalNum(Math.Abs(input20))}");
 
         // ЗАДАЧА 8
-        int input21 = lab.ProverkaNum("\nВведите число " +
+        int input21 = lab.CheckNum("\nВведите число " +
             "для потсроения треугольника: ");
         lab.leftTriangle(input21);
 
@@ -143,7 +144,7 @@
         Console.WriteLine("Исходный массив: ");
         lab.PrintMas(mas);
 
-        int input22 = lab.ProverkaNum("Введите число" +
+        int input22 = lab.CheckNum("Введите число" +
             " из массива: ");
         Console.WriteLine($"Индекс последнего вхождения" +
             $" числа: {lab.findLast(mas, input22)}");
@@ -156,8 +157,9 @@
         lab.PrintMas(mas2);
         Console.WriteLine();
 
-        int inputX = lab.ProverkaNum("Введите эл для вставки: ");
-        int inputPos = lab.ProverkaNum("Введите индекс замены: ");
+        int inputX = lab.CheckNum("Введите эл для вставки: ");
+        int inputPos = lab.CheckNum
+        ("Введите индекс замены: ");
         Console.WriteLine();
 
         mas2 = lab.add(mas2, inputX, inputPos);
@@ -166,7 +168,7 @@
         Console.WriteLine();
 
         // ЗАДАЧА 6
-        int count_el = lab.ProverkaNum("\nВведите кол-во " +
+        int count_el = lab.CheckNum("\nВведите кол-во " +
             "эл. массива: ");
 
         int[] mas3 = new int[count_el];
@@ -182,9 +184,9 @@
         Console.WriteLine();
 
         // ЗАДАЧА 8
-        int count_el1 = lab.ProverkaNum("\nВведите" +
+        int count_el1 = lab.CheckNum("\nВведите" +
             " размерность 1 массива: ");
-        int count_el2 = lab.ProverkaNum("\nВведите" +
+        int count_el2 = lab.CheckNum("\nВведите" +
             " размерность 2 массива: ");
 
 
@@ -206,8 +208,8 @@
         Console.WriteLine();
 
         // ЗАДАЧА 10
-        int count_el3 = lab.ProverkaNum("\nВведите" +
-            " размерность массива: ");
+        int count_el3 = lab.CheckNum("\nВведите" +
+                " размерность массива: ");
 
         int[] mas6 = new int[count_el3];
         lab.RandomMas(mas6, -10, 51);
@@ -216,7 +218,7 @@
         lab.PrintMas(mas6);
         Console.WriteLine();
 
-        Console.WriteLine("Массив без отрицательных эл-ов:");
+        Console.WriteLine("Массив без отрицательных эл-в:");
         lab.PrintMas(lab.deleteNegative(mas6));
     }
     }

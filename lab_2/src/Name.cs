@@ -27,13 +27,14 @@ internal class Name
         get { return _firstName; }
         private set
         {
-            if (value != null && value != "")
+            if (value != null && value != " ")
             {
                 _firstName = value;
             }
             else
             {
-                Console.WriteLine("Ошибка класса! Имя не может быть пустым.");
+                Console.WriteLine("Ошибка класса! " +
+                    "Имя не может быть пустым.");
                 _firstName = "Иван";
             }
         }

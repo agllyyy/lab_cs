@@ -1,7 +1,7 @@
 ﻿
-    internal class ZadaniaLab1
+    internal class Method
     {
-        public int ProverkaNum(string promt)
+        public int CheckNum(string promt)
         {
             Console.Write(promt);
             string? input = Console.ReadLine();
@@ -22,7 +22,7 @@
             }
         }
 
-    public void RandomMas(int[] arr, int min, int max)
+        public void RandomMas(int[] arr, int min, int max)
         {
             Random rnd = new Random();
 
@@ -207,12 +207,12 @@
             Random rnd = new Random();
             int zagad_num = rnd.Next(0, 10);
 
-            int x = ProverkaNum("Введите число от 0 до 9: ");
+            int x = CheckNum("Введите число от 0 до 9: ");
             int count = 0;
 
             while (zagad_num != x)
             {
-                x = ProverkaNum("Вы не угадали, " +
+                x = CheckNum("Вы не угадали, " +
                     "введите число (0-9): ");
                 count++;
             }

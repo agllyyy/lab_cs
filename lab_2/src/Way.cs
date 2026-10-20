@@ -38,7 +38,8 @@ internal class Way
             }
             else
             {
-                Console.WriteLine($"Ошибка! Стоимости - {value} нет на рис.2!");
+                Console.WriteLine($"Ошибка! " +
+                    $"Стоимости - {value} нет на рис.2!");
                 _price = 1;
             }
         }
