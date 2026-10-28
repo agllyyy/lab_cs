@@ -1,8 +1,8 @@
 ﻿
-internal class Checked
+internal  class Checked
 {
     // проверка на bool
-    public bool ReadBool(string promt)
+    public  bool ReadBool(string promt)
     {
         Console.WriteLine(promt);
         string? input = Console.ReadLine();
@@ -27,7 +27,7 @@ internal class Checked
 
     // проверка на int (по идее должны быть статическими, но пока что так)
     // ? - польз. может ничего не ввести
-    public int ReadInt(string promt)
+    public  int ReadInt(string promt)
     {
         Console.Write(promt);
         string? input = Console.ReadLine();
@@ -50,7 +50,7 @@ internal class Checked
         }
     }
 
-    public int NaturalReadInt(string promt)
+    public  int NaturalReadInt(string promt)
     {
         Console.WriteLine(promt);
         string? input = Console.ReadLine();
@@ -72,7 +72,7 @@ internal class Checked
     }
 
     // проверка на double
-    public double ReadDouble(string promt)
+    public  double ReadDouble(string promt)
     {
         Console.WriteLine(promt);
         string? input = Console.ReadLine();
