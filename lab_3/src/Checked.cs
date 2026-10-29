@@ -4,7 +4,7 @@ internal static class Checked
     // проверка на bool
     public static bool ReadBool(string promt)
     {
-        Console.WriteLine(promt);
+        Console.Write(promt);
         string? input = Console.ReadLine();
 
         bool x = true;
@@ -74,7 +74,7 @@ internal static class Checked
     // проверка на double
     public static double ReadDouble(string promt)
     {
-        Console.WriteLine(promt);
+        Console.Write(promt);
         string? input = Console.ReadLine();
 
         double x = 0;

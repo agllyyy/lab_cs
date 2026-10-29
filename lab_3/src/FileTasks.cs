@@ -4,7 +4,7 @@ using System.IO;
 internal static class FileTasks
 {
 
-        public static void WriteRandomBinary(string filePath, int count, bool isBinary)
+    public static void WriteRandomBinary(string filePath, int count, bool isBinary)
     {
         Random rnd = new Random();
 
