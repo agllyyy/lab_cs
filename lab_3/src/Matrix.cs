@@ -7,27 +7,28 @@ internal class Matrix
     {
         _matrix = new double[n, m];
 
-        for (int j = 0; j < _matrix.GetLength(1); j++)
+        for (int j = 0; j < Cols; j++)
         {
-            for (int i = _matrix.GetLength(0) - 1; i >= 0; i--)
+            for (int i = Rows - 1; i >= 0; i--)
             {
                 _matrix[i, j] = Checked.ReadDouble
                     ($"Введите элемент [{i}, {j}]: ");
             }
         }
     }
-    public Matrix(int n, bool popRandom)
+    public Matrix(int n, bool addRandom)
     {
         Random rnd = new Random();
         _matrix = new double[n, n];
 
-        if (popRandom)
+        if (addRandom)
         {
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j <= i; j++)
                 {
-                    _matrix[i, j] = rnd.NextDouble() * (100 - (-100)) + (-100);
+                    _matrix[i, j] = rnd.NextDouble() * 
+                        (100 - (-100)) + (-100);
                 }
             }
 
@@ -35,7 +36,8 @@ internal class Matrix
             {
                 for (int j = i + 1; j < n; j++)
                 {
-                    _matrix[i, j] = rnd.NextDouble() * (45.675 - (-4.5)) + (-4.5);
+                    _matrix[i, j] = rnd.NextDouble() *
+                        (45.675 - (-4.5)) + (-4.5);
                 }
             }
         }
@@ -55,8 +57,8 @@ internal class Matrix
                     int j = d - i;
                     _matrix[i, j] = num++;
                 }
-                
             }
+
             else 
             {
                 for (int i = 0; i <= d; i++)
@@ -69,11 +71,11 @@ internal class Matrix
     }
 
 
-    public Matrix(int n, int m, bool popRandom)
+    public Matrix(int n, int m, bool addRandom)
     {
         _matrix = new double[n, m];
 
-        if (popRandom)
+        if (addRandom)
         {
             Random rnd = new Random();
             for (int i = 0; i < n; i++)
@@ -140,6 +142,7 @@ internal class Matrix
         }
         return null;
     }
+
 
     public static Matrix operator +(Matrix a, Matrix b)
     {

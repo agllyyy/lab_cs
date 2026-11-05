@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //// ЗАДАНИЕ 1
+        // ЗАДАНИЕ 1
 
         //int n1 = Checked.NaturalReadInt
         //    ("введите кол-во строк: n = ");
@@ -110,7 +110,8 @@ internal class Program
         //    byte[] bytes = File.ReadAllBytes(way1);
         //    for (int i = 0; i < bytes.Length / 4; i++)
         //    {
-        //        Console.Write(BitConverter.ToInt32(bytes, i * 4) + " ");
+        //        Console.Write
+        //            (BitConverter.ToInt32(bytes, i * 4) + " ");
         //    }
         //    Console.WriteLine("\n");
         //    rez2 = FileTasks.MulNegativeOdd(way1);
@@ -194,7 +195,8 @@ internal class Program
         //        {
         //            Console.WriteLine($"\nВ файле нет строк" +
         //                $" длиной {input3} символов.");
-        //            Console.WriteLine("Введите другое число.\n");
+        //            Console.WriteLine
+        //                ("Введите другое число.\n");
         //        }
 
         //    } while (countStr == 0);
@@ -218,29 +220,34 @@ internal class Program
 
 
 
-        // ЗАДАНИЕ 7
+        //// ЗАДАНИЕ 7
 
-        string textWay7 = "task7.txt";
-        int m7 = Checked.NaturalReadInt("Введите кол-во строк: ");
-        int n7 = Checked.NaturalReadInt("Введите кол-во столбцов: ");
+        //string textWay7 = "task7.txt";
+        //int m7 = Checked.NaturalReadInt
+        //    ("Введите кол-во строк: ");
+        //int n7 = Checked.NaturalReadInt
+        //    ("Введите кол-во столбцов: ");
 
-        try
-        {
-            FileTasks.WriteRandomStruct(textWay7, m7, n7);
-            Console.WriteLine("\nСодержимое созданного файла:");
-            Console.WriteLine(File.ReadAllText(textWay7));
+        //try
+        //{
+        //    FileTasks.WriteRandomStruct(textWay7, m7, n7);
+        //    Console.WriteLine("\nСодержимое созданного файла:");
+        //    Console.WriteLine(File.ReadAllText(textWay7));
 
-            long rez7 = FileTasks.MulEl(textWay7);
-            Console.WriteLine($"\nПроизведение элементов: {rez7}");
-        }
-        catch (FileNotFoundException)
-        {
-            Console.WriteLine("Ошибка: Текстовый файл не найден!");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Произошла ошибка: {ex.Message}");
-        }
+        //    long rez7 = FileTasks.MulEl(textWay7);
+        //    Console.WriteLine
+        //        ($"\nПроизведение элементов: {rez7}");
+        //}
+        //catch (FileNotFoundException)
+        //{
+        //    Console.WriteLine
+        //        ("Ошибка: Текстовый файл не найден!");
+        //}
+        //catch (Exception ex)
+        //{
+        //    Console.WriteLine
+        //        ($"Произошла ошибка: {ex.Message}");
+        //}
 
 
 

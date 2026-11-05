@@ -4,7 +4,8 @@ using System.IO;
 internal static class FileTasks
 {
 
-    public static void WriteRandomBinary(string filePath, int count, bool isBinary)
+    public static void WriteRandomBinary
+        (string filePath, int count, bool isBinary)
     {
         Random rnd = new Random();
 
@@ -119,7 +120,8 @@ internal static class FileTasks
 
 
 
-    public static void WriteRandomStruct(string filePath, int rows, int cols)
+    public static void WriteRandomStruct
+        (string filePath, int rows, int cols)
     {
         Random rnd = new Random();
         string[] lines = new string[rows];

@@ -24,8 +24,6 @@ internal static class Checked
     }
 
     // проверка на string
-
-    // проверка на int (по идее должны быть статическими, но пока что так)
     // ? - польз. может ничего не ввести
     public static int ReadInt(string promt)
     {
