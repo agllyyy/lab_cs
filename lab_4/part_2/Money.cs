@@ -37,12 +37,9 @@ internal class Money
 
     public Money AddKopeks(uint numKopeks)
     {
-        uint allKopeks = (uint)Kopeks + numKopeks;
+        uint totalKopeks = (uint)Kopeks + numKopeks;
 
-        Rubles += allKopeks / 100;
-        Kopeks = (byte)(allKopeks % 100);
-
-        return new Money(Rubles, Kopeks);
+        return new Money(Rubles, (byte)totalKopeks);
     }
 
 

@@ -2,6 +2,8 @@
 {
     static void Main(string[] args)
     {
+        // ЗАДАНИЕ 6
+
         uint rubles = Checked.ReadUint
             ("Введите количество рублей: ");
         byte kopeks = Checked.ReadByte
@@ -18,52 +20,53 @@
             $"{wallet.AddKopeks(addKopeks)}\n");
 
 
+        //// ЗДАНИЕ 7
 
-        Console.WriteLine
-            ($"Добавление 1 копейки: {++wallet}\n");
-        try
-        {
-            Console.WriteLine
-                ($"Вычитание 1 копейки: {--wallet}\n");
-        }
-        catch (InvalidOperationException ex)
-        {
-            Console.WriteLine($"Ошибка: {ex.Message}\n");
-        }
-
-
-        double kopecks = wallet;
-        Console.WriteLine
-            ($"Неявное приведение в double: {kopecks}\n");
-        Console.WriteLine
-            ($"Явное приведение в uint: {(uint)wallet}\n");
+        //Console.WriteLine
+        //    ($"Добавление 1 копейки: {++wallet}\n");
+        //try
+        //{
+        //    Console.WriteLine
+        //        ($"Вычитание 1 копейки: {--wallet}\n");
+        //}
+        //catch (InvalidOperationException ex)
+        //{
+        //    Console.WriteLine($"Ошибка: {ex.Message}\n");
+        //}
 
 
-        uint subCount1 = Checked.ReadUint
-            ($"Введите кол-во рублей для вычитания из" +
-            $" кошелька ({wallet}): ");
-        try
-        {
-            Console.WriteLine($"Правосторонняя операция " +
-                $"({wallet} - {subCount1}): {wallet - subCount1}\n");
-        }
-        catch (InvalidOperationException ex)
-        {
-            Console.WriteLine($"Ошибка: {ex.Message}\n");
-        }
+        //double kopecks = wallet;
+        //Console.WriteLine
+        //    ($"Неявное приведение в double: {kopecks}\n");
+        //Console.WriteLine
+        //    ($"Явное приведение в uint: {(uint)wallet}\n");
 
-        uint subCount2 = Checked.ReadUint
-            ($"Введите число рублей, из которого мы вычтем " +
-            $"кошелёк ({wallet}): ");
-        try
-        {
-            Console.WriteLine($"Левосторонняя операция " +
-                $"({subCount2} - {wallet}): {subCount2 - wallet}\n");
-        }
-        catch (InvalidOperationException ex)
-        {
-            Console.WriteLine($"Ошибка: {ex.Message}\n");
-        }
+
+        //uint subCount1 = Checked.ReadUint
+        //    ($"Введите кол-во рублей для вычитания из" +
+        //    $" кошелька ({wallet}): ");
+        //try
+        //{
+        //    Console.WriteLine($"Правосторонняя операция " +
+        //        $"({wallet} - {subCount1}): {wallet - subCount1}\n");
+        //}
+        //catch (InvalidOperationException ex)
+        //{
+        //    Console.WriteLine($"Ошибка: {ex.Message}\n");
+        //}
+
+        //uint subCount2 = Checked.ReadUint
+        //    ($"Введите число рублей, из которого мы вычтем " +
+        //    $"кошелёк ({wallet}): ");
+        //try
+        //{
+        //    Console.WriteLine($"Левосторонняя операция " +
+        //        $"({subCount2} - {wallet}): {subCount2 - wallet}\n");
+        //}
+        //catch (InvalidOperationException ex)
+        //{
+        //    Console.WriteLine($"Ошибка: {ex.Message}\n");
+        //}
 
     }
 }
