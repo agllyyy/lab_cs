@@ -77,8 +77,11 @@
 
         LinkedList<int> sortedList = new LinkedList<int>();
 
-        foreach (int value in list)
+        while (list.Count > 0)
         {
+            int value = list.First.Value;
+            list.RemoveFirst();
+
             LinkedListNode<int> node = sortedList.First;
 
             while (node != null && node.Value < value)
@@ -96,7 +99,6 @@
             }
         }
 
-        list.Clear();
         foreach (int value in sortedList)
         {
             list.AddLast(value);
@@ -111,15 +113,14 @@
     {
         if (group == null || group.Count < 1) return;
 
-        HashSet<string> playAll = new (group[0]);
-        playAll.IntersectWith(group[1]);
-        playAll.IntersectWith(group[2]);
-
-
+        HashSet<string> playAll = new(group[0]);
         HashSet<string> playSome = new(group[0]);
-        playSome.UnionWith(group[1]);
-        playSome.UnionWith(group[2]);
 
+        for (int i = 1; i < group.Count; i++)
+        {
+            playAll.IntersectWith(group[i]); 
+            playSome.UnionWith(group[i]);
+        }
 
         HashSet<string> playNobody = new (allGames);
         playNobody.ExceptWith(playSome);
@@ -183,7 +184,8 @@
         char[] separators = { ' ', ',', '.', '!', '?', '-',
                               ';', ':', '\n', '\r', '\t' };
 
-        string[] words = rawText.Split(separators);
+        string[] words = rawText.Split(
+            separators, StringSplitOptions.RemoveEmptyEntries);
 
         int i = 0;
         while (i < words.Length)
@@ -192,49 +194,6 @@
             i++;
         }
         return words;
-    }
-
-    private static HashSet<char> GetLettersOfWord(string word)
-    {
-        HashSet<char> wordLetters = new HashSet<char>();
-        int charIndex = 0;
-
-        while (charIndex < word.Length)
-        {
-            wordLetters.Add(word[charIndex]);
-            charIndex++;
-        }
-        return wordLetters;
-    }
-
-    private static HashSet<char> FindCommonLetters(string[] words)
-    {
-        HashSet<char> commonLetters = null;
-        int w = 0;
-
-        while (w < words.Length)
-        {
-            string currentWord = words[w];
-
-            if (currentWord.Length == 0)
-            {
-                w++;
-                continue;
-            }
-
-            HashSet<char> wordLetters = GetLettersOfWord(currentWord);
-
-            if (commonLetters == null)
-            {
-                commonLetters = new HashSet<char>(wordLetters);
-            }
-            else
-            {
-                commonLetters.IntersectWith(wordLetters);
-            }
-            w++;
-        }
-        return commonLetters;
     }
 
 

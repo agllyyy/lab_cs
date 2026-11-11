@@ -2,31 +2,31 @@
 {
     static void Main(string[] args)
     {
-    //    // ЗАДАНИЕ 1 
+        //    // ЗАДАНИЕ 1 
 
-    //    List<int> List = Tasks15.ReadList();
-    //    Console.WriteLine($"\nОсновной список L:\n" +
-    //        $"[{string.Join(", ", List)}]\n");
+        //    List<int> List = Tasks15.ReadList();
+        //    Console.WriteLine($"\nОсновной список L:\n" +
+        //        $"[{string.Join(", ", List)}]\n");
 
-    //    Console.WriteLine($"Какой фрагмент нужно заменить из L?");
-    //    List<int> List1 = Tasks15.ReadList();
-    //    Console.WriteLine();
+        //    Console.WriteLine($"Какой фрагмент нужно заменить из L?");
+        //    List<int> List1 = Tasks15.ReadList();
+        //    Console.WriteLine();
 
-    //    Console.WriteLine($"На что заменить фрагмент?");
-    //    List<int> List2 = Tasks15.ReadList();
-    //    Console.WriteLine();
+        //    Console.WriteLine($"На что заменить фрагмент?");
+        //    List<int> List2 = Tasks15.ReadList();
+        //    Console.WriteLine();
 
-    //    bool Rez = Tasks15.ReplaceList(List, List1, List2);
+        //    bool Rez = Tasks15.ReplaceList(List, List1, List2);
 
-    //    Console.WriteLine("Итоговый список L:");
-    //    if (Rez)
-    //    {
-    //        Console.WriteLine($"[{string.Join(", ", List)}]");
-    //    }
-    //    else
-    //    {
-    //        Console.WriteLine($"[{string.Join(", ", List)}] (Фрагмент не найден, список не изменился)");
-    //    }
+        //    Console.WriteLine("Итоговый список L:");
+        //    if (Rez)
+        //    {
+        //        Console.WriteLine($"[{string.Join(", ", List)}]");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"[{string.Join(", ", List)}] (Фрагмент не найден, список не изменился)");
+        //    }
 
 
 
