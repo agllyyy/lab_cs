@@ -2,22 +2,22 @@
 {
     static void Main(string[] args)
     {
-        // ЗАДАНИЕ 6
+        //// ЗАДАНИЕ 6
 
-        uint rubles = Checked.ReadUint
-            ("Введите количество рублей: ");
-        byte kopeks = Checked.ReadByte
-            ("Введите количество копеек (0-255): ");
+        //uint rubles = Checked.ReadUint
+        //    ("Введите количество рублей: ");
+        //byte kopeks = Checked.ReadByte
+        //    ("Введите количество копеек (0-255): ");
 
-        Money wallet = new Money(rubles, kopeks);
+        //Money wallet = new Money(rubles, kopeks);
 
-        Console.WriteLine($"Изначально денег: {wallet}\n");
+        //Console.WriteLine($"Изначально денег: {wallet}\n");
 
-        uint addKopeks = Checked.ReadUint
-            ("Введите кол-во копеек для добавления: ");
-        Console.WriteLine
-            ($"Денег после добавления: " +
-            $"{wallet.AddKopeks(addKopeks)}\n");
+        //uint addKopeks = Checked.ReadUint
+        //    ("Введите кол-во копеек для добавления: ");
+        //Console.WriteLine
+        //    ($"Денег после добавления: " +
+        //    $"{wallet.AddKopeks(addKopeks)}\n");
 
 
         //// ЗДАНИЕ 7

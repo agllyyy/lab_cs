@@ -33,16 +33,20 @@
 
 
 
-    public static List<int> ReadList()
+    public static List<int> ReadList(int count)
     {
+        
+        if (count < 0)
+        {
+            throw new ArgumentException(
+                "Количнство элементов не может быть" +
+                " отрицательным!");
+        }
+        
         List<int> newList = new List<int>();
-
-        uint size = Checked.ReadUint
-            ($"Введите кол-во эл. в список: ");
         int element;
-        Console.WriteLine();
 
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < count; i++)
         {
             element = Checked.ReadInt($"Введите [{i}]: ");
             newList.Add(element);
@@ -159,8 +163,8 @@
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine
-                ("Ошибка: Текстовый файл не найден по пути: "
+            Console.WriteLine(
+                "Ошибка: Текстовый файл не найден по пути: "
                 + filePath);
             return null;
         }
@@ -307,7 +311,7 @@
         {
             if (kvp.Value == maxPoints)
             {
-                Console.WriteLine(kvp.Key);
+                Console.WriteLine($"{kvp.Key } - { maxPoints} баллов");
             }
         }
     }

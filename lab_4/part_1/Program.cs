@@ -2,21 +2,41 @@
 {
     static void Main(string[] args)
     {
-        //    // ЗАДАНИЕ 1 
+        // ЗАДАНИЕ 1
 
-        //    List<int> List = Tasks15.ReadList();
+        //bool Rez;
+
+        //try
+        //{
+        //    int n = Checked.NaturalReadInt(
+        //    "Введите кол-во элементов в основной список: ");
+
+        //    List<int> List = Tasks15.ReadList(n);
         //    Console.WriteLine($"\nОсновной список L:\n" +
         //        $"[{string.Join(", ", List)}]\n");
 
         //    Console.WriteLine($"Какой фрагмент нужно заменить из L?");
-        //    List<int> List1 = Tasks15.ReadList();
+
+        //    int n1 = Checked.NaturalReadInt(
+        //    "Введите кол-во элементов в фрагменте: ");
+
+        //    if (n1 > List.Count)
+        //    {
+        //        throw new ArgumentException(
+        //            "Размер фрагмента больше основного списка!" +
+        //            " Замена невозможна. ");
+        //    }
+        //    List<int> List1 = Tasks15.ReadList(n1);
         //    Console.WriteLine();
 
         //    Console.WriteLine($"На что заменить фрагмент?");
-        //    List<int> List2 = Tasks15.ReadList();
+        //    int n2 = Checked.NaturalReadInt(
+        //        "Введите кол-во элементов в фрагмент для замены: ");
+
+        //    List<int> List2 = Tasks15.ReadList(n2);
         //    Console.WriteLine();
 
-        //    bool Rez = Tasks15.ReplaceList(List, List1, List2);
+        //    Rez = Tasks15.ReplaceList(List, List1, List2);
 
         //    Console.WriteLine("Итоговый список L:");
         //    if (Rez)
@@ -27,6 +47,12 @@
         //    {
         //        Console.WriteLine($"[{string.Join(", ", List)}] (Фрагмент не найден, список не изменился)");
         //    }
+
+        //}
+        //catch (ArgumentException ex)
+        //{
+        //    Console.WriteLine("Ошибка: " + ex.Message);
+        //}
 
 
 
@@ -40,7 +66,6 @@
 
         //Console.WriteLine($"Отсортированный список:\n" +
         //    $"[{string.Join(", ", linkedList)}]");
-
 
 
 
@@ -105,7 +130,7 @@
         //    Console.WriteLine($"{fileContent}");
         //    Console.WriteLine();
 
-        //    Console.WriteLine("Участники с max кол-ом баллов:");
+        //    Console.WriteLine("Участники с max количеством баллов:");
         //    Tasks15.PrintWinners(fileContent);
         //}
 
