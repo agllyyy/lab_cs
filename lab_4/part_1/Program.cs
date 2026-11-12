@@ -2,52 +2,44 @@
 {
     static void Main(string[] args)
     {
-        // ЗАДАНИЕ 1
-
-        //bool Rez;
+        ////ЗАДАНИЕ 1
 
         //try
         //{
         //    int n = Checked.NaturalReadInt(
-        //    "Введите кол-во элементов в основной список: ");
+        //        "Введите кол-во элементов в основной список: ");
 
-        //    List<int> List = Tasks15.ReadList(n);
+        //    List<string> L = Tasks15.ReadList(n, Checked.ReadString);
+
         //    Console.WriteLine($"\nОсновной список L:\n" +
-        //        $"[{string.Join(", ", List)}]\n");
+        //        $"[{string.Join(", ", L)}]\n");
 
-        //    Console.WriteLine($"Какой фрагмент нужно заменить из L?");
+        //    Console.WriteLine("Какой фрагмент нужно заменить из L?");
 
         //    int n1 = Checked.NaturalReadInt(
-        //    "Введите кол-во элементов в фрагменте: ");
+        //        "Введите кол-во элементов в фрагменте: ");
 
-        //    if (n1 > List.Count)
+        //    if (n1 > L.Count)
         //    {
         //        throw new ArgumentException(
         //            "Размер фрагмента больше основного списка!" +
-        //            " Замена невозможна. ");
+        //            " Замена невозможна.");
         //    }
-        //    List<int> List1 = Tasks15.ReadList(n1);
+
+        //    List<string> L1 = Tasks15.ReadList(n1, Checked.ReadString);
         //    Console.WriteLine();
 
-        //    Console.WriteLine($"На что заменить фрагмент?");
+        //    Console.WriteLine("На что заменить фрагмент?");
         //    int n2 = Checked.NaturalReadInt(
         //        "Введите кол-во элементов в фрагмент для замены: ");
 
-        //    List<int> List2 = Tasks15.ReadList(n2);
+        //    List<string> L2 = Tasks15.ReadList(n2, Checked.ReadString);
         //    Console.WriteLine();
 
-        //    Rez = Tasks15.ReplaceList(List, List1, List2);
+        //    List<string> rez = Tasks15.ReplaceList(L, L1, L2);
 
-        //    Console.WriteLine("Итоговый список L:");
-        //    if (Rez)
-        //    {
-        //        Console.WriteLine($"[{string.Join(", ", List)}]");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine($"[{string.Join(", ", List)}] (Фрагмент не найден, список не изменился)");
-        //    }
-
+        //    Console.WriteLine("Итоговый список:");
+        //    Console.WriteLine($"[{string.Join(", ", rez)}]");
         //}
         //catch (ArgumentException ex)
         //{
@@ -58,7 +50,9 @@
 
         //// ЗАДАНИЕ 2
 
-        //LinkedList<int> linkedList = Tasks15.ReadLinkedList();
+        //LinkedList<string> linkedList = 
+        //    Tasks15.ReadLinkedList(Checked.ReadString);
+
         //Console.WriteLine($"\nИсходный связный список:\n" +
         //    $"[{string.Join(", ", linkedList)}]\n");
 

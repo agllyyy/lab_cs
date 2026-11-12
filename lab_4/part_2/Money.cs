@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-using System.Xml.Linq;
-
+﻿
 internal class Money
 {
     private uint _rubles;

@@ -1,94 +1,106 @@
 ﻿internal static class Tasks15
 {
-    public static bool ReplaceList
-        (List<int> List, List<int> List1, List<int> List2)
-    {
-        if (List1 == null || List1.Count == 0) return false;
 
-        int index = -1;
-        int j;
-        for (int i = 0; i <= List.Count - List1.Count; i++)
+    // должно возвращать список + должны быть не int  в списка а любые кроч переделать!!!!!!!!
+    public static List<T> ReplaceList<T>(
+    List<T> L, List<T> L1, List<T> L2)
+    {
+        if (L == null) return null;
+
+        List<T> rez = new List<T>(L);
+
+        if (L1 == null || L2 == null ||
+            L1.Count == 0 || L1.Count > rez.Count)
         {
-            j = 0;
-            while (j < List1.Count && List[i + j] == List1[j])
+            return rez;
+        }
+
+        EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+
+        for (int i = 0; i <= rez.Count - L1.Count; i++)
+        {
+            bool isMatch = true;
+
+            for (int j = 0; j < L1.Count; j++)
             {
-                j++;
+                if (!object.Equals(rez[i + j], L1[j]))
+                {
+                    isMatch = false;
+                    break;
+                }
             }
 
-            if (j == List1.Count)
+            if (isMatch)
             {
-                index = i;
+                rez.RemoveRange(i, L1.Count);
+                rez.InsertRange(i, L2);
                 break;
             }
         }
 
-        if (index != -1)
-        {
-            List.RemoveRange(index, List1.Count);
-            List.InsertRange(index, List2);
-            return true;
-        }
-        return false;
+        return rez;
     }
 
 
-
-    public static List<int> ReadList(int count)
+    //
+    public static List<T> ReadList<T>(
+     int count, Func<string, T> readElement)
     {
-        
         if (count < 0)
         {
             throw new ArgumentException(
-                "Количнство элементов не может быть" +
+                "Количество элементов не может быть" +
                 " отрицательным!");
         }
-        
-        List<int> newList = new List<int>();
-        int element;
+
+        List<T> newList = new List<T>(count);
 
         for (int i = 0; i < count; i++)
         {
-            element = Checked.ReadInt($"Введите [{i}]: ");
+            T element = readElement($"Введите [{i}]: ");
             newList.Add(element);
         }
 
         return newList;
     }
 
-    public static LinkedList<int> ReadLinkedList()
+    //
+    public static LinkedList<T> ReadLinkedList<T>(
+    Func<string, T> readElement)
     {
-        LinkedList<int> newLinkedList = new LinkedList<int>();
+        LinkedList<T> newLinkedList = new LinkedList<T>();
 
-        uint size = Checked.ReadUint($"Введите кол-во эл. в " +
-            $"связный список: ");
+        uint size = Checked.ReadUint(
+            "Введите кол-во эл. в связный список: ");
         Console.WriteLine();
-        int element;
 
         for (int i = 0; i < size; i++)
         {
-            element = Checked.ReadInt($"Введите [{i}]: ");
+            T element = readElement($"Введите [{i}]: ");
             newLinkedList.AddLast(element);
         }
+
         return newLinkedList;
     }
 
 
 
-
-    public static void SortLinkedList(LinkedList<int> list)
+    public static void SortLinkedList<T>(LinkedList<T> list)
     {
         if (list == null || list.Count < 2) return;
 
-        LinkedList<int> sortedList = new LinkedList<int>();
+        LinkedList<T> sortedList = new LinkedList<T>();
+        Comparer<T> comparer = Comparer<T>.Default;
 
         while (list.Count > 0)
         {
-            int value = list.First.Value;
+            T value = list.First.Value;
             list.RemoveFirst();
 
-            LinkedListNode<int> node = sortedList.First;
+            LinkedListNode<T> node = sortedList.First;
 
-            while (node != null && node.Value < value)
+            while (node != null &&
+                   comparer.Compare(node.Value, value) < 0)
             {
                 node = node.Next;
             }
@@ -103,7 +115,7 @@
             }
         }
 
-        foreach (int value in sortedList)
+        foreach (T value in sortedList)
         {
             list.AddLast(value);
         }
@@ -142,7 +154,7 @@
     }
 
 
-
+    //
     public static string ReadTextFile(string filePath)
     {
         StreamReader reader = null;
@@ -182,7 +194,7 @@
             }
         }
     }
-
+    //
     private static string[] ExtractWords(string rawText)
     {
         char[] separators = { ' ', ',', '.', '!', '?', '-',
@@ -234,6 +246,7 @@
         Console.WriteLine();
     }
 
+    //
     public static void CreateTestFile(string filePath)
     {
         StreamWriter writer = null;

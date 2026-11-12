@@ -2,7 +2,7 @@
 {
     static void Main(string[] args)
     {
-        //// ЗАДАНИЕ 6
+        // ЗАДАНИЕ 6
 
         //uint rubles = Checked.ReadUint
         //    ("Введите количество рублей: ");
@@ -70,4 +70,3 @@
 
     }
 }
-
