@@ -1,20 +1,18 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-internal class Sales
+﻿internal class Sales
 {
     private int _id;
     private int _idAnimal;
     private int _idBuyers;
-    private DateTime _data;
+    private DateTime _date;
     private int _price;
 
     public Sales(int _id, int _idAnimal, 
-        int _idBuyers, DateTime _data, int _price)
+        int _idBuyers, DateTime _date, int _price)
     {
         Id = _id;
         AnimalId = _idAnimal;
         BuyerId = _idBuyers;
-        Date = _data;
+        Date = _date;
         Price = _price;
     }
 
@@ -45,7 +43,11 @@ internal class Sales
             ("ID покупателя должен быть положительным числом.");
     }
 
-    public DateTime Date { get; private set; }
+    public DateTime Date
+    {
+        get => _date;
+        private set => _date = value;
+    }
 
     public int Price
     {
@@ -56,21 +58,10 @@ internal class Sales
             ("Цена не может быть отрицательной.");
     }
 
-    public override string ToString()
-    {
-        return $"Чек #{Id} от {Date:dd.MM.yyyy}:" +
-            $" Животное ID = {AnimalId}, Покупатель ID = " +
-            $"{BuyerId}, Цена = {Price}";
-    }
 
-
-
-
-
-
-
-
-
+    public override string ToString() =>
+    $"{Id,-6} | {Date:dd.MM.yyyy} | {AnimalId,-8} |" +
+        $" {BuyerId,-8} | {Price} руб.";
 
 
 }

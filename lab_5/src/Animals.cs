@@ -12,7 +12,6 @@
         Breed = breed;
     }
 
-    // проверку в свойствах не забудь 
     public int Id
     {
         get {  return _id; }
@@ -24,14 +23,27 @@
             _id = value;
         }
     }
-
-    public string Species { get; private set; }
-    public string Breed { get; private set; }
-
-
-    public override string ToString()
+    public string Species
     {
-        return $"[{_id}] {_species}, {_breed}";
+        get => _species;
+        private set => _species = !string.IsNullOrWhiteSpace(
+            value)
+            ? value.Trim()
+            : throw new ArgumentException(
+                "Вид животного не может быть пустым!");
     }
+
+    public string Breed
+    {
+        get => _breed;
+        private set => _breed = string.IsNullOrWhiteSpace(value)
+            ? "Без породы"
+            : value.Trim();
+    }
+
+
+    public override string ToString() =>
+    $"{Id,-5} | {Species,-12} | {Breed,-18}";
+
 
 }

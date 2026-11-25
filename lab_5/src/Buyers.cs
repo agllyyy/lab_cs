@@ -25,15 +25,6 @@
             ("ID должен быть положительным числом.");
     }
 
-    public int Age
-    {
-        get => _age;
-        private set => _age = value >= 18
-            ? value
-            : throw new ArgumentException
-            ("Возраст покупателя должен быть не меньше 18 лет.");
-    }
-
     public string Name
     {
         get => _name;
@@ -41,6 +32,15 @@
             ? value.Trim()
             : throw new ArgumentException
             ("Имя не может быть пустым!");
+    }
+
+    public int Age
+    {
+        get => _age;
+        private set => _age = value >= 18
+            ? value
+            : throw new ArgumentException
+            ("Возраст покупателя должен быть не меньше 18 лет.");
     }
 
     public string Address
@@ -54,24 +54,8 @@
     }
 
 
-    public override string ToString()
-    {
-        return $"[{Id}] {Name}, {Age} лет, {Address}";
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public override string ToString() =>
+    $"{Id,-5} | {Name,-26} | {Age,-4} | {Address}";
 
 
 
